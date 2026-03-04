@@ -79,6 +79,17 @@ src/
 
 The production build outputs a fully static site to `dist/`. Deploy to any static host:
 
+**Render (recommended)**
+1. Go to [render.com](https://render.com) → New → **Static Site**
+2. Connect your GitHub repo (`jems0906/CreatorCash-Dashboard`)
+3. Render auto-detects `render.yaml` — no manual config needed
+4. Click **Create Static Site**
+
+The `render.yaml` in the repo sets:
+- Build command: `npm install; npm run build`
+- Publish directory: `dist`
+- SPA rewrite rule: all routes → `index.html`
+
 **Netlify / Vercel / GitHub Pages**
 ```bash
 npm run build
